@@ -1,0 +1,358 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body,html{
+    height:100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+.main{
+    background-color: #000000;
+}
+.header{
+    width: 90%;
+    height: 50px;
+    z-index: 1000;
+    margin-left: 5%;
+    margin-top: 1%;
+    border-radius: 80px;
+    padding: 0px 10px;
+    padding-left: 24px;
+    mix-blend-mode: difference;
+    position: fixed;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+}
+.logo{
+    font-family: "Kaushan Script", cursive;
+    font-size: 30px;
+    width: fit-content;
+    rotate: -20deg;
+    cursor: pointer;
+}
+nav{
+    width: fit-content;
+    margin: auto 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 15px
+}
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    content:'';
+}
+nav ul li a:before{
+    content:'';
+    position: absolute;
+    left:0;
+    width:0;
+    height: 1px;
+    background-color: white;
+    bottom: -5px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover:before{
+    width: 100%;
+}
+.content{
+    padding: 0px 100px;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    position: relative;
+    color: white;
+    z-index: 0;
+}
+.content .text{
+    width: 100%;
+    z-index: 2;
+}
+.content .img_group{
+    position: absolute;
+    top:20%;
+    left:0;
+    margin:0 auto;
+    width:100%;
+    padding:0 50px;
+    z-index: 1;
+}
+.content .img_group img{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0;
+}
+.content .text h1{
+    font-size: 80px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 95px;
+    text-transform: uppercase;
+}
+h1 .developer{
+    position: relative;
+}
+h1 .developer:before{
+    content:"";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    left:0;
+    bottom: -1px;
+    transition: all 0.3s ease;
+}
+h1 .developer:hover:before{
+    width: 100%;
+}
+.bottom_text{
+    position: absolute;
+    bottom: 30px;
+    left:0;
+    text-align: center;
+    width: 100%;
+}
+.bottom_text h5{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page1{
+    height: 100vh;
+    width:100%;
+    color:#111;
+    margin-top: 10%;
+    padding: 10px 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.page1-left{
+    width: 35%;
+    height: 100%;
+    padding-top: 5%;
+    text-align: left;
+    color:#111;
+    text-transform: uppercase;
+}
+.page1-left h1{
+    font-size: 5vw;
+    font-weight: 400;
+    line-height: 4vw;
+}
+.page1-left h2{
+    font-size: 2vw;
+    font-weight: 300;
+    line-height: 5vw;
+}
+.page1-right{
+    width: 40%;
+    height: 100%;
+}
+.page1-right img{
+    width: 80%;
+    height: 90%;
+    object-fit: cover;
+    opacity: 0;
+}
+.page2{
+    height: 50vh;
+    width:100%;
+    margin-top: 5%;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.ct{
+    font-size: 2vw;
+}
+.c-tool{
+    width:19%
+}
+.c-tool h1{
+    font-size: 3vw;
+    font-weight: 400;
+    line-height: 4vw;
+}
+.c-tool p{
+    font-size: 1vw;
+    font-weight: 300;
+}
+.f-works{
+    width: 100%;
+    padding-left: 5%;
+    color: white;
+}
+.f-works h1,h2{
+    position: relative;
+    font-size: 9vw;
+    font-weight: 400;
+}
+.f-works h1{
+    left:20%
+}
+.f-works h2{
+    left:43%
+}
+.page3{
+    height: 100vh;
+    width:90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    transform: translate(0%,0%);
+    padding: 60px 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    border-top: 1px solid white;
+}
+.page4{
+    height: 100vh;
+    width:90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    transform: translate(0%,0%);
+    padding: 60px 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+    border-top: 1px solid black;
+}
+.page3-left,.page3-right{
+    width: 40%;
+    height: 100%;
+}
+.page3-left video,.page4-right video{
+    width: 0px;
+    height: 0px;
+    object-fit: cover;
+    padding-top: 15%;
+    opacity: 1;
+}
+.page3-right{
+    width: 40%;
+    height: 100%;
+    text-align: right;
+}
+.page4-left{
+    width: 40%;
+    height: 100%;
+    text-align: left;
+}
+.page3-right h2,.page4-left h2{
+    font-size: 5vw;
+    font-weight: 400;
+    line-height: 8vw;
+    margin-bottom: 5%;
+}
+.page3-right p{
+    text-align: left;
+}
+.page4-left p{
+    text-align: right;
+}
+.page3-right h4,.page4-left h4{
+    font-size: 2vw;
+    font-weight: 300;
+    line-height: 5vw;
+    margin-top: 13%;
+    cursor: pointer;
+}
+.page5{
+    width: 100%;
+    height: 100vh;
+    padding-top: 5%;
+}
+.page5 h1{
+    font-size: 10vw;
+    font-weight: 400;
+    line-height: 8vw;
+    margin-top: 1%;
+    margin-bottom: -1%;
+    margin-right: 1%;
+    text-align: right;
+}
+.page5 h5{
+    font-size: 1vw;
+    font-weight: 500;
+    line-height: .9vw;
+    margin-bottom: 5%;
+    margin-left: 1%;
+}
+.page5 h2{
+    font-size: 2vw;
+    font-weight: 500;
+    line-height: 2vw;
+    margin-top: 5%;
+    margin-left: 1%;
+    text-align: center;
+}
+.footer{
+    width: 90%;
+    margin-left: 5%;
+    padding: 0px 10px;
+    padding-left: 24px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    margin-top: 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+.b-nav{
+    width: fit-content;
+    margin: auto 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.b-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 15px
+}
+.b-nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    content:'';
+}
+.b-nav ul li a:before{
+    content:'';
+    position: absolute;
+    left:0;
+    width:0;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    bottom: -5px;
+    transition: all 0.3s ease;
+}
+.b-nav ul li a:hover:before{
+    width: 100%;
+}
